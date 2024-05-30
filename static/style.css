@@ -23,11 +23,52 @@ footer {
 }
 
 .windows-button {
-    align-items: center;
-    justify-content: center;
     font-family: windows-regular;
-    font-weight: 300;
-    font-size: large;
-    margin: 1rem;
-    padding: 5px;
+    min-width: 100px;
+    font-weight: bolder;
+    margin: 10px 10px 10px;
+    height: 40px;
+    box-shadow: 2px 2px black, -2px -2px .1em white;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: #C5C5C5;
+    float:left;
+}
+
+.windows-button:active {
+    background-color: #A0A0A0;
+    color:white;
+}
+
+.windows-button h1 {
+    font-size: 25px;
+    float:right;
+    padding: 0;
+    margin: 0;
+}
+
+footer .url {
+    font-size: 25px;
+    float:left;
+    font-weight: bold;
+    background-color: #B6B6B6;
+    padding: 3px 15px;
+    text-shadow: 2px 2px 1px black;
+    letter-spacing: 4px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.274); 
+}
+
+footer #clock {
+    font-size: 25px;
+    float:right;
+    font-weight: bolder;
+    background-color: #B6B6B6;
+    padding: 3px 15px;
+    text-shadow: 2px 2px 1px black;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.274); 
 }
