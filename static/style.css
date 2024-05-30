@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'windows-regular';
+    src: url(./Windows_Regular.ttf);
+}
+
+body {
+    font-family: windows-regular;
+    background-color: #008080;
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+  
+header {
+    min-height: 50px;
+}
+  
+footer {
+    min-height: 40px;
+    background: #C5C5C5;
+}
+
+.windows-button {
+    align-items: center;
+    justify-content: center;
+    font-family: windows-regular;
+    font-weight: 300;
+    font-size: large;
+    margin: 1rem;
+    padding: 5px;
+}
