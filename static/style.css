@@ -3,6 +3,8 @@
     src: url(./Windows_Regular.ttf);
 }
 
+/* Layout */
+
 body {
     font-family: windows-regular;
     background-color: #008080;
@@ -14,9 +16,38 @@ body {
 }
   
 header {
-    min-height: 50px;
+    min-height: 20px;
 }
-  
+
+/* Column Styling */
+
+.icons-column {
+    width: 10%;
+    float: left;
+    text-align: center;
+}
+
+.icons-column img {
+    width: 70px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.icons-column img :nth-child() {
+    padding-top: 30px;
+}
+
+.icons-column h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Footer Styling */
+
 footer {
     min-height: 40px;
     background: #C5C5C5;
