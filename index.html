@@ -5,33 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/style.css">
     <link href='https://fonts.googleapis.com/css?family=Spline Sans Mono' rel='stylesheet'>
+
     <script src="./static/index.js" defer></script>
+
+    <!-- jQuery-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <title>Ana Lopez Murillo's Personal Webite</title>
 </head>
 <body>
     <header></header>
     <main>
+        <!--Icons (left)-->
         <div class="icons-column">
-            <img src="./static/icons/DesktopLarge.png">
-            <h1>Desktop</h1>
+            <div class="draggable">
+                <img src="./static/icons/DesktopLarge.png" id="desktop">
+                <h1 class="child">Desktop</h1>
+            </div>
 
-            <img src="./static/icons/WindowsLarge.png">
-            <h1>Weather</h1>
 
-            <img src="./static/icons/Github.png">
-            <h1>GitHub</h1>
+            <div class="draggable">
+                <img src="./static/icons/WeatherLarge.png" id="weather" >
+                <h1 class="child">Weather</h1>
+            </div>
 
-            <img src="./static/icons/LinkedIn.png">
-            <h1>LinkedIn</h1>
+            <a href="https://github.com/AnaLopezMurillo" target="_blank" class="draggable">
+                <img src="./static/icons/Github.png" id="github">
+                <h1 class="child">GitHub</h1>
+            </a>
 
-            <img src="./static/icons/sitespecsLarge.png">
-            <h1>Site Specs</h1>
+            <a href="https://www.linkedin.com/in/analopezmurillo/" target="_blank" class="draggable">
+                <img src="./static/icons/LinkedIn.png" id="linkedin">
+                <h1 class="child">LinkedIn</h1>
+            </a>
 
-            <img src="./static/icons/RecycleLarge.png">
-            <h1>Recycling Bin</h1>
-            
+            <div class="draggable">
+                <img src="./static/icons/sitespecsLarge.png" id="site-specs">
+                <h1 class="child">Site Specs</h1>
+            </div>
+
+            <div class="draggable">
+                <img src="./static/icons/RecycleLarge.png" id="recycling">
+                <h1 class="child">Recycling Bin</h1>
+            </div>
 
         </div>
+
+        <!--Work Space (Right)-->
+
+        <!--Desktop-->
+        <div class="desktop tab draggable resizable">
+            <div class="tab-header">
+                <img src="./static/icons/DesktopSmall.png">
+                <p>Desktop</p>
+            </div>
+            <div class="tab-content">
+                <!--imgs here-->
+            </div>
+        </div>
+
     </main>
     <footer>
         <button class="windows-button">

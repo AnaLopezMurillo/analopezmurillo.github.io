@@ -1,3 +1,15 @@
+// movement functions
+
+$( function() {
+    $( ".draggable" ).draggable();
+} );
+
+$( function() {
+    $( ".resizable" ).resizable({
+    }
+    );
+} );
+
 
 // footer functions
 let windowsButton = document.getElementsByClassName('windows-button')[0];
@@ -25,8 +37,6 @@ function clock() {
             (hours < 10 ? "0" + hours : hours) + ":" + 
             (minutes < 10 ? "0" + minutes : minutes) + ":" + 
             (seconds < 10 ? "0" + seconds : seconds) + " " + ampm;
-
-        console.log(formattedTime);
         document.getElementById('clock').innerText = formattedTime;
     }
     setInterval(updateClock, 1000);
