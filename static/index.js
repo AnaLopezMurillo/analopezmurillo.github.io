@@ -1,14 +1,53 @@
 // movement functions
 
-$( function() {
-    $( ".draggable" ).draggable();
-} );
+$(document).ready(function() {
+    const about = $(".about");
+    const desktop = $(".desktop");
 
-$( function() {
-    $( ".resizable" ).resizable({
+    about.draggable({
+        start: function() { 
+            bringToFront(about); 
+        }
+    }).resizable({});
+
+    desktop.draggable({
+        start: function() { 
+            bringToFront(desktop); 
+        }
+    }).resizable({});
+
+    function bringToFront(el) {
+        $(".about, .desktop").css("z-index", 1);
+        el.css("z-index", 2);
     }
-    );
-} );
+});
+
+// $( function() {
+//     $( ".draggable" ).draggable();
+// } );
+
+// $( function() {
+//     $( ".resizable" ).resizable({
+//     }
+//     );
+// } );
+
+
+let icon_container = document.querySelector('.icons-column');
+
+const tabs = document.getElementsByClassName('tab');
+
+icon_container.addEventListener("dblclick", function(event) {
+    const icon = event.target.closest(".icon");
+    if (!icon) return;
+
+    for (let tab of tabs) {
+        if (tab.id === icon.id + "-tab") {
+            tab.style.display = "block";
+        }
+    }
+}) 
+
 
 
 // footer functions
