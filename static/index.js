@@ -3,6 +3,13 @@
 $(document).ready(function() {
     const about = $(".about");
     const desktop = $(".desktop");
+    const research = $(".research");
+
+    research.draggable({
+        start: function() { 
+            bringToFront(research); 
+        }
+    }).resizable({});
 
     about.draggable({
         start: function() { 
@@ -16,25 +23,23 @@ $(document).ready(function() {
         }
     }).resizable({});
 
-    function bringToFront(el) {
-        $(".about, .desktop").css("z-index", 1);
-        el.css("z-index", 2);
-    }
 });
 
-// $( function() {
-//     $( ".draggable" ).draggable();
-// } );
+$( function() {
+    $( ".draggable" ).draggable();
+} );
 
-// $( function() {
-//     $( ".resizable" ).resizable({
-//     }
-//     );
-// } );
+$( function() {
+    $( ".resizable" ).resizable();
+} );
+
+function bringToFront(el) {
+    $(".about, .desktop").css("z-index", 1);
+    el.css("z-index", 2);
+}
 
 
 let icon_container = document.querySelector('.icons-column');
-
 const tabs = document.getElementsByClassName('tab');
 
 icon_container.addEventListener("dblclick", function(event) {
@@ -44,6 +49,8 @@ icon_container.addEventListener("dblclick", function(event) {
     for (let tab of tabs) {
         if (tab.id === icon.id + "-tab") {
             tab.style.display = "block";
+            let el = $("#" + icon.id + "-tab");
+            bringToFront(el);
         }
     }
 }) 

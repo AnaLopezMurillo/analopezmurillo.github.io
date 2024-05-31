@@ -3,6 +3,8 @@
     src: url(./Windows_Regular.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Layout */
 
 body {
@@ -20,6 +22,11 @@ body {
   
 header {
     min-height: 20px;
+}
+
+.resizable {
+    bottom: 0;
+    position:absolute;
 }
 
 /* Column Styling */
@@ -63,6 +70,8 @@ a {
     background-color:#306db79d
 }
 
+/* Tab Styling */
+
 .tab-header {
     width: inherit;
     z-index: 2;
@@ -72,6 +81,7 @@ a {
     border-color: #C5C5C5;
     border-width: 2px;
     border-style:solid;
+    position: fixed;
 }
 
 .tab-header p {
@@ -109,16 +119,96 @@ a {
     border-style:solid;
 }
 
+/* About Tab Styling */
+
 .about {
     display: block;
     z-index: 2;
     position: absolute;
-    width: 700px;
-    height: 600px;
+    width: 740px;
+    height: 630px;
     overflow-y: scroll;
-    bottom: 15vh;
+    bottom: 23vh;
     left: 25vw;
 }
+
+.content {
+    margin-top: 30px;
+}
+
+.about .tab-content {
+    margin: 20px 20px;
+}
+
+.about .tab-content .header-img {
+    width: 35%;
+    position:relative;
+    margin-bottom: 0;
+}
+
+.about .tab-content.first {
+    margin-bottom: 0;
+}
+
+.about .tab-content.first p {
+    width: 60%;
+    margin-left: 0;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.about .tab-content p {
+    margin-left: 30px;
+    padding:0;
+    margin:0;
+    width: 100%;
+    font-size: 25px;
+    float:right;
+    letter-spacing: 1px;
+}
+
+.about .callout {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about .callout img {
+    width: 30%;
+    float:left;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.about .callout h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    width: 20%;
+    float:left;
+    padding: 0;
+    margin: 40px 40px;
+}
+
+.about .callout h1:hover {
+    color:#3b60e9;
+}
+
+.about span {
+    font-size: 28px;
+    font-weight: bold;
+    color:#0b2585;
+}
+
+
+.about span.name {
+    font-size: 32px;
+}
+
+/* Desktop Tab Styling */
 
 .desktop {
     display: block;
@@ -160,6 +250,18 @@ a {
     padding: 0;
 }
 
+/* Research Tab */
+
+.research {
+    width: 800px;
+    height: 600px;
+    display:none;
+    position: absolute;
+    z-index: 2;
+    top: -95vh;
+    left: 45vw;
+    overflow-y: scroll;
+}
 
 /* Footer Styling */
 
