@@ -37,6 +37,14 @@ a {
     color: white;
 }
 
+.icon {
+    cursor: pointer;
+}
+
+.desktop-icon.icon:active {
+    background-color:#306db79d
+}
+
 .icons-column {
     width: 10%;
     float: left;
@@ -77,7 +85,8 @@ a {
     z-index: 2;
     height: 30px;
     overflow: hidden;
-    background-color: #253D92;
+    background:
+        linear-gradient(to right, #01087E,#3A7DC7);
     border-color: #C5C5C5;
     border-width: 2px;
     border-style:solid;
@@ -119,12 +128,39 @@ a {
     border-style:solid;
 }
 
+.exit {
+    position: relative;
+    float:right;
+    width: 20px;
+    height: 20px;
+    background-color:#A0A0A0;
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 3px;
+    text-align: center;
+    border-color: rgba(0, 0, 0, 0.612);
+    border-width: 2px;
+    border-style:solid;
+    box-shadow: -1px -1px 1px rgba(252, 252, 252, 0.877), 1px 1px 1px rgb(0, 0, 0), inset 0px 2px 4px rgba(240, 240, 240, 0.788);
+}
+
+.exit:hover {
+    cursor: pointer;
+}
+
+.exit:active {
+    background-color:#5a5a5a;
+    color: white;
+}
+
 /* About Tab Styling */
 
 .about {
     display: block;
-    z-index: 2;
-    position: absolute;
+    visibility: visible;
+    z-index: 1;
+    position: fixed;
     width: 740px;
     height: 630px;
     overflow-y: scroll;
@@ -212,6 +248,7 @@ a {
 
 .desktop {
     display: block;
+    visibility: visible;
     position: absolute;
     z-index: 1;
     width: 520px;
@@ -255,11 +292,12 @@ a {
 .research {
     width: 800px;
     height: 600px;
-    display:none;
-    position: absolute;
-    z-index: 2;
-    top: -95vh;
-    left: 45vw;
+    display:block;
+    visibility: hidden;
+    position: fixed;
+    z-index: 4;
+    top: -90vh;
+    left: 10vw;
     overflow-y: scroll;
 }
 

@@ -34,11 +34,23 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    $(".about, .desktop").css("z-index", 1);
+    $(".about, .desktop, .research").css("z-index", 1);
     el.css("z-index", 2);
 }
 
+// exit button listener
+let exitButtons = document.querySelectorAll('.exit');
 
+for (let b of exitButtons) {
+    b.addEventListener("click", function(event) {
+        let tab = b.parentElement.parentElement;
+        tab.style.visibility = "none";
+        tab.style.display = "none";
+    })
+}
+
+
+// icon container listener (left)
 let icon_container = document.querySelector('.icons-column');
 const tabs = document.getElementsByClassName('tab');
 
@@ -48,6 +60,7 @@ icon_container.addEventListener("dblclick", function(event) {
 
     for (let tab of tabs) {
         if (tab.id === icon.id + "-tab") {
+            tab.style.visibility = "visible";
             tab.style.display = "block";
             let el = $("#" + icon.id + "-tab");
             bringToFront(el);
@@ -55,6 +68,22 @@ icon_container.addEventListener("dblclick", function(event) {
     }
 }) 
 
+// desktop tab listener
+let desktop_icons = document.querySelector('.content');
+console.log(desktop_icons);
+desktop_icons.addEventListener("click", function(event) {
+    const icon = event.target.closest(".icon")
+    if (!icon) return;
+
+    for (let tab of tabs) {
+        if (tab.id === icon.id + "-tab") {
+            tab.style.visibility = "visible";
+            tab.style.display = "block";
+            let el = $("#" + icon.id + "-tab");
+            bringToFront(el);
+        }
+    }
+})
 
 
 // footer functions
