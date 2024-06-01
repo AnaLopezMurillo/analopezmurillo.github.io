@@ -303,7 +303,7 @@ a {
     width: 900px;
     height: 600px;
     display:block;
-    visibility: visible;
+    visibility: hidden;
     position: fixed;
     z-index: 4;
     top: -90vh;
@@ -362,7 +362,7 @@ footer {
 }
 
 .windows-button {
-    font-family: windows-regular;
+    font-family: 'windows-regular';
     min-width: 100px;
     font-weight: bolder;
     margin: 10px 10px 10px;
@@ -398,13 +398,58 @@ footer .url {
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.274); 
 }
 
+footer .music-box {
+    display:flex;
+    font-size: 20px;
+    float:left;
+    font-weight: bolder;
+    background-color: #B6B6B6;
+    padding: 2px 15px;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.274); 
+    text-align: center;
+}
+
+.play-button {
+    float:left;
+    width: 20px;
+    height: 23px;
+    padding-left: 2px;
+    margin-top: 3px;
+    margin-left: 10px;
+    background-color: #C5C5C5;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: -1px -1px 1px rgba(252, 252, 252, 0.877), 1px 1px 1px rgb(0, 0, 0), inset 0px 2px 4px rgba(240, 240, 240, 0.788);
+}
+
+.play-button.first {
+    margin-left: 0px;
+}
+
+.skip {
+    width: 24px;
+}
+
+.song-name {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-shadow: 2px 2px 1px black;
+}
+
+
 footer #clock {
     font-size: 20px;
     float:right;
     font-weight: bolder;
     background-color: #B6B6B6;
     padding: 3px 15px;
-    text-shadow: 2px 2px 1px black;
+    color: black;
     letter-spacing: 3px;
     margin-left: 10px;
     margin-top: 10px;

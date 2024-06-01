@@ -70,7 +70,6 @@ icon_container.addEventListener("dblclick", function(event) {
 
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');
-console.log(desktop_icons);
 desktop_icons.addEventListener("click", function(event) {
     const icon = event.target.closest(".icon")
     if (!icon) return;
@@ -118,3 +117,29 @@ function clock() {
 }
 
 clock();
+
+let playButton = document.getElementsByClassName('play-button first')[0];
+let songDiv = document.getElementsByClassName('song-name')[0];
+const music = new Audio(src="./static/music/OnlineOfficeV4.mp3")
+const musicLibrary = {
+    "Online Office V4.20 - 猫 シ Corp.": "./static/music/OnlineOfficeV4.mp3"
+}
+let i = 0;
+playButton.addEventListener("click", function() {
+    if (!music.paused) {
+        playButton.innerHTML = "||"
+        music.pause();
+    } else {
+        playButton.innerHTML = "►"
+        music.play();
+    }
+
+    if (!music.paused) {
+        playButton.innerHTML = "||"
+    } else {
+        playButton.innerHTML = "►"
+        music.pause();
+    }
+
+    songDiv.innerHTML = "Now playing: Online Office V4.20 - 猫 シ Corp."
+})
