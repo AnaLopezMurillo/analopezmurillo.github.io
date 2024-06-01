@@ -311,6 +311,11 @@ a {
     overflow-y: scroll;
 }
 
+.research h1 {
+    margin: 0;
+    padding: 0;
+}
+
 .research img.hip67522 {
     width: 100%;
 }

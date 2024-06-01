@@ -154,16 +154,23 @@
                         </figure>
                     </p>
                     <p>
-                        Mass measurements for exoplanets are highly valued in astronomy research, but current detection methods are biased due to stellar mass observations. Transit timing variations, or <span>TTVs</span>, offer an alternate route to finding these measurements. By studying the gravitational interactions between exoplanets in a system, we can glean information about their mass ratios and eccentricity. 
+                        Mass measurements for exoplanets are highly valued in astronomy research, but current detection methods alone cannot find masses. Transit timing variations, or <span>TTVs</span>, offer an alternate route to finding these measurements. By studying the gravitational interactions between exoplanets in a system, we can glean information about their mass ratios and eccentricity. 
                         <br><br>
-                        My research focuses on conducting a survey of TTVs in young planetary systems with the intent of following-up for mass measurements. We survey 59 planets orbiting 40 systems using data from <span class="italic">Kepler, K2,</span> and <span class="italic">TESS</span>. We recover TTVs present in previously reported systems like AU Mic, and report the discovery of TTVs in systems such as HIP-67522 and TOI-1224.
+                        My research focuses on conducting a survey of TTVs in young planetary systems with the intent of providing a list of planets with TTVs available for mass measurement follow-up. We survey 59 planets orbiting 40 systems using data from <span class="italic">Kepler, K2,</span> and <span class="italic">TESS</span>. We recover TTVs present in previously reported systems like AU Mic, and report the discovery of TTVs in systems such as HIP-67522 and TOI-1224.
                         <figure>
                             <img class="hip67522" src="./static/images/HIP67522_Transit.png">
-                            <figcaption>Transit fit for transit #7 of HIP 67522 b</figcaption>
+                            <figcaption>Transit fit and MCMC exploration for transit #7 of HIP 67522 b</figcaption>
                         </figure>
                     </p>
                     <p>
-                        I have contributed to TTV analysis for emerging exoplanet papers published in Nature and the Astrophysical Journal such as Thao et. al (2024) and Barber et. al (2024)
+                        To fit transits, we use the <span class="bold"><a href="https://github.com/lkreidberg/batman" target="_blank">BATMAN</a></span> Python package in conjunction with a Gaussian Process (GP) implemented in <span class="bold"><a href="https://celerite2.readthedocs.io/en/latest/" target="_blank">celerite2</a></span> using a simple harmonic oscillator (SHO) kernel to fit the out of transit variation. Results are calculated by recording the observed time of transit midpoint (t0) vs. expected by calculation using the planetary period (Observed - Calculated metric). TTVs are quantified using a reduced chi-squared metric.
+                        <figure>
+                            <img class="hip67522" src="./static/images/HIP67522_OC.png">
+                            <figcaption>Observed - Calculated (O-C) diagram for HIP 67522 b.</figcaption>
+                        </figure>
+                    </p>
+                    <p>
+                        We are currently working through our survey of planets, and are simultaneously writing a paper with our results. I have also had the opportunity to contribute TTV analyses for exoplanet discovery papers published in the Astrophysical Journal and Nature such as Thao et. al 2024 and Barber et. al 2024 (in publishing stage), and presented my findings thus far at the <span><a href="https://our.unc.edu/abstract/lopez-murillo-searching-for-transit-timing-variations-in-young-planetary-systems/" target="_blank">Celebration of Undergraduate Research</a></span> at UNC-Chapel Hill.
                     </p>
                 </div>
 
