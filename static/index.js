@@ -34,7 +34,7 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    $(".about, .desktop, .research").css("z-index", 1);
+    $(".desktop, .about, .research").css("z-index", 1);
     el.css("z-index", 2);
 }
 

@@ -91,6 +91,7 @@ a {
     border-width: 2px;
     border-style:solid;
     position: fixed;
+    cursor: pointer;
 }
 
 .tab-header p {
@@ -115,12 +116,15 @@ a {
     float: left;
     position: relative;
     margin: 1rem 1rem;
+    padding: 0rem 1rem;
 }
 
 .tab {
     display:none;
     position: absolute;
+    overflow: hidden;
     overflow-y: scroll;
+    direction:ltr;
     background-color: #FFFFFF;
     overflow-y: scroll;
     border-color: black;
@@ -250,6 +254,7 @@ a {
     display: block;
     visibility: visible;
     position: absolute;
+    overflow-y:hidden;
     z-index: 1;
     width: 520px;
     height: 400px;
@@ -267,6 +272,11 @@ a {
 
 .tab-content {
     margin: 20px 10px 20px;
+}
+
+.tab-content p {
+    font-size: 25px;
+    letter-spacing: 1px;
 }
 
 .desktop-icon {
@@ -290,16 +300,51 @@ a {
 /* Research Tab */
 
 .research {
-    width: 800px;
+    width: 900px;
     height: 600px;
     display:block;
-    visibility: hidden;
+    visibility: visible;
     position: fixed;
     z-index: 4;
     top: -90vh;
     left: 10vw;
     overflow-y: scroll;
 }
+
+.research img.hip67522 {
+    width: 100%;
+}
+
+figcaption {
+    font-size: 20px;
+}
+
+.research span {
+    color:#1f46d3;
+}
+
+.research span.italic {
+    color:black;
+    font-style: italic;
+}
+
+.research span.bold {
+    font-weight: bold;
+}
+
+.research a{
+    color:#1f46d3;
+}
+
+.research a:hover {
+    color:#87a0f8;
+}
+
+.research figure {
+    text-align: center;
+}
+
+
 
 /* Footer Styling */
 
