@@ -168,7 +168,6 @@ a {
 .about {
     display: block;
     visibility: visible;
-    position:fixed;
     z-index: 1;
     position: fixed;
     width: 740px;
@@ -310,7 +309,7 @@ a {
     width: 900px;
     height: 600px;
     display:block;
-    visibility: visible;
+    visibility: hidden;
     z-index: 4;
     top: 20vh;
     left: 10vw;
@@ -361,7 +360,6 @@ figcaption {
     height: 400px;
     display:block;
     visibility: visible;
-    position: fixed;
     background-color:#e2e1e1;
     position: fixed;
     z-index: 2;

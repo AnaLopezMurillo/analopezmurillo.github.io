@@ -1,28 +1,18 @@
 // movement functions
 
+const tabNames = ['about', 'research', 'desktop', 'site']
+
 $(document).ready(function() {
-    const about = $(".about");
-    const desktop = $(".desktop");
-    const research = $(".research");
 
-    research.draggable({
-        start: function() { 
-            bringToFront(research); 
-        }
-    }).resizable({});
-
-    about.draggable({
-        start: function() { 
-            bringToFront(about); 
-        }
-    }).resizable({});
-
-    desktop.draggable({
-        start: function() { 
-            bringToFront(desktop); 
-        }
-    }).resizable({});
-
+    for (let tab in tabNames) {
+        let tabName = "." + tabNames[tab];
+        let tabEl = $(tabName);
+        tabEl.draggable({
+            start: function() {
+                bringToFront(tabEl);
+            }
+        }).resizable({});
+    }
 });
 
 $( function() {
@@ -34,15 +24,12 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    $(".desktop, .about, .research").css("z-index", 1);
+    $(".desktop, .about, .research, .site").css("z-index", 1);
     el.css("z-index", 2);
 }
 
 // exit button listener
 let exitButtons = document.querySelectorAll('.exit');
-let allTabs = document.querySelectorAll('.tab');
-
-let tab_names = ['site', 'about', 'research', 'desktop'];
 
 for (let b of exitButtons) {
     b.addEventListener("click", function(event) {
@@ -127,7 +114,7 @@ let playButton = document.getElementsByClassName('play-button first')[0];
 let songDiv = document.getElementsByClassName('song-name')[1];
 const musicLibrary = {
     "Attitude - Luxury Elite": "./static/music/Attitude.mp3",
-    "Slice of Paradise - Karl Casey (White Bat Audio)" : "./static/music/SliceofParadise.mp3",
+    "Slice of Paradise - Karl Casey" : "./static/music/SliceofParadise.mp3",
 }
 let songNames = Object.keys(musicLibrary);
 let songSrc = Object.values(musicLibrary);
