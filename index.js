@@ -1,9 +1,7 @@
 // movement functions
-
-const tabNames = ['about', 'research', 'desktop', 'site']
+const tabNames = ['about', 'research', 'desktop']
 
 $(document).ready(function() {
-
     for (let tab in tabNames) {
         let tabName = "." + tabNames[tab];
         let tabEl = $(tabName);
@@ -41,7 +39,6 @@ for (let b of exitButtons) {
     })
 }
 
-
 // icon container listener (left)
 let icon_container = document.querySelector('.icons-column');
 const tabs = document.getElementsByClassName('tab');
@@ -65,7 +62,6 @@ let desktop_icons = document.querySelector('.content');
 desktop_icons.addEventListener("click", function(event) {
     const icon = event.target.closest(".icon")
     if (!icon) return;
-
     for (let tab of tabs) {
         if (tab.id === icon.id + "-tab") {
             tab.style.visibility = "visible";
@@ -76,6 +72,20 @@ desktop_icons.addEventListener("click", function(event) {
     }
 })
 
+// about tab listener 
+let about_icons = document.querySelector('#about-content');
+about_icons.addEventListener("click", function(event) {
+    const icon = event.target.closest(".icon");
+    if (!icon) return;
+    for (let tab of tabs) {
+        if (tab.id === icon.id + "-tab") {
+            tab.style.visibility = "visible";
+            tab.style.display = "block";
+            let el = $("#" + icon.id + "-tab");
+            bringToFront(el);
+        }
+    }
+})
 
 // footer functions
 let windowsButton = document.getElementsByClassName('windows-button')[0];
@@ -120,6 +130,7 @@ let songNames = Object.keys(musicLibrary);
 let songSrc = Object.values(musicLibrary);
 let music = new Audio(src=musicLibrary[songNames[0]]);
 console.log()
+music.volume = 0.5
 
 let i = 0;
 

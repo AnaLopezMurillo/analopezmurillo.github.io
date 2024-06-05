@@ -356,16 +356,16 @@ figcaption {
 
 /* Site Specs */
 .site {
-    width: 400px;
+    width: 370px;
     height: 400px;
     display:block;
     visibility: visible;
     background-color:#e2e1e1;
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 40vh;
     left: 20vw;
-    overflow-y: scroll;
+    overflow-y:hidden;
     text-align: center;
 }
 
@@ -385,6 +385,10 @@ figcaption {
 
 .site a:hover {
     color:rgb(94, 138, 214);
+}
+
+.site h1 {
+    margin-top: -10px;
 }
 
 
