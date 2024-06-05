@@ -40,12 +40,17 @@ function bringToFront(el) {
 
 // exit button listener
 let exitButtons = document.querySelectorAll('.exit');
+let allTabs = document.querySelectorAll('.tab');
+
+let tab_names = ['site', 'about', 'research', 'desktop'];
 
 for (let b of exitButtons) {
     b.addEventListener("click", function(event) {
+        // exit out of clicked tab
         let tab = b.parentElement.parentElement;
         tab.style.visibility = "none";
         tab.style.display = "none";
+
     })
 }
 
@@ -119,12 +124,18 @@ function clock() {
 clock();
 
 let playButton = document.getElementsByClassName('play-button first')[0];
-let songDiv = document.getElementsByClassName('song-name')[0];
-const music = new Audio(src="./static/music/OnlineOfficeV4.mp3")
+let songDiv = document.getElementsByClassName('song-name')[1];
 const musicLibrary = {
-    "Online Office V4.20 - 猫 シ Corp.": "./static/music/OnlineOfficeV4.mp3"
+    "Attitude - Luxury Elite": "./static/music/Attitude.mp3",
+    "Slice of Paradise - Karl Casey (White Bat Audio)" : "./static/music/SliceofParadise.mp3",
 }
+let songNames = Object.keys(musicLibrary);
+let songSrc = Object.values(musicLibrary);
+let music = new Audio(src=musicLibrary[songNames[0]]);
+console.log()
+
 let i = 0;
+
 playButton.addEventListener("click", function() {
     if (!music.paused) {
         playButton.innerHTML = "||"
@@ -140,6 +151,10 @@ playButton.addEventListener("click", function() {
         playButton.innerHTML = "►"
         music.pause();
     }
+    songDiv.innerHTML = "Attitude - Luxury Elite"
+})
 
-    songDiv.innerHTML = "Now playing: Online Office V4.20 - 猫 シ Corp."
+let skipButton = document.getElementsByClassName('skip play-button')[0];
+skipButton.addEventListener("click", function() {
+
 })
