@@ -276,6 +276,15 @@ a {
     text-align: center;
 }
 
+
+.desktop a {
+    font-style:normal;
+    color: black;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
 .tab-content {
     margin: 20px 10px 20px;
 }
@@ -359,7 +368,7 @@ figcaption {
     width: 370px;
     height: 400px;
     display:block;
-    visibility: visible;
+    visibility: hidden;
     background-color:#e2e1e1;
     position: fixed;
     z-index: 1;
@@ -391,6 +400,43 @@ figcaption {
     margin-top: -10px;
 }
 
+/* Projects Tab */
+.projects {
+    width: 1000px;
+    height: 800px;
+    display:block;
+    visibility: visible;
+    background-color:#ffffff;
+    position: fixed;
+    z-index: 1;
+    top: 5vh;
+    left: 10vw;
+    overflow-y:hidden;
+    text-align: center;
+    text-align: left;;
+}
+
+.projects h2 {
+    padding: 0 0 7px;
+    margin: 0;
+}
+
+.projects p {
+    margin: 0;
+    padding: 0;
+}
+
+.projects .caption {
+    font-style: italic;
+    font-size: 15px;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+}
+
+.projects .bold {
+    font-weight: bold;
+}
 
 /* Footer Styling */
 
@@ -490,10 +536,11 @@ footer #clock {
     font-weight: bolder;
     background-color: #B6B6B6;
     padding: 3px 15px;
-    color: black;
+    color: white;
     letter-spacing: 3px;
     margin-left: 10px;
     margin-top: 10px;
     margin-right: 10px;
+    text-shadow: 2px 2px 1px black;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.274); 
 }

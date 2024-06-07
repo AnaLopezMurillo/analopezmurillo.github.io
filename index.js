@@ -1,5 +1,7 @@
 // movement functions
-const tabNames = ['about', 'research', 'desktop']
+
+// automate this to grab any the first class of any tab div
+const tabNames = ['about', 'research', 'desktop', 'projects']
 
 $(document).ready(function() {
     for (let tab in tabNames) {
@@ -22,7 +24,7 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    $(".desktop, .about, .research, .site").css("z-index", 1);
+    $(".desktop, .about, .research, .site, .projects").css("z-index", 1);
     el.css("z-index", 2);
 }
 
@@ -129,12 +131,11 @@ const musicLibrary = {
 let songNames = Object.keys(musicLibrary);
 let songSrc = Object.values(musicLibrary);
 let music = new Audio(src=musicLibrary[songNames[0]]);
-console.log()
 music.volume = 0.5
-
 let i = 0;
 
 playButton.addEventListener("click", function() {
+    // fix this logic
     if (!music.paused) {
         playButton.innerHTML = "||"
         music.pause();
@@ -148,11 +149,16 @@ playButton.addEventListener("click", function() {
     } else {
         playButton.innerHTML = "►"
         music.pause();
-    }
-    songDiv.innerHTML = "Attitude - Luxury Elite"
+    } 
+    songDiv.innerHTML = songNames[i];
 })
 
 let skipButton = document.getElementsByClassName('skip play-button')[0];
-skipButton.addEventListener("click", function() {
-
+skipButton.addEventListener("click", function(event) {
+    if (songSrc.length - 1 == i) {
+        i = 0;
+    } else {
+        i+=1;
+    }
+    music.currentSrc = songSrc[i];
 })
