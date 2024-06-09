@@ -86,7 +86,7 @@ a {
 
 .tab-header {
     width: inherit;
-    z-index: 2;
+    z-index: 3;
     height: 30px;
     overflow: hidden;
     background:
@@ -99,6 +99,7 @@ a {
 }
 
 .tab-header p {
+    z-index: 3;
     font-size: 18px;
     font-weight: bold;
     padding: 3px 0px;
@@ -126,15 +127,17 @@ a {
 .tab {
     display:none;
     position: absolute;
-    overflow: hidden;
     position: fixed;
-    overflow-y: scroll;
     direction:ltr;
     background-color: #FFFFFF;
-    overflow-y: scroll;
     border-color: black;
     border-width: 2px;
     border-style:solid;
+}
+
+.tab .content {
+    z-index: 1;
+    overflow-y: scroll;
 }
 
 .exit {
@@ -248,6 +251,10 @@ a {
     color:#0b2585;
 }
 
+.about a {
+    color: black;
+}
+
 
 .about span.name {
     font-size: 32px;
@@ -274,15 +281,15 @@ a {
     display: flex;
     flex-direction: row;
     text-align: center;
+    margin-bottom: 20px;
+    margin-right: 30px;
 }
 
-
 .desktop a {
+    display: flex;
+    flex-direction: row;
     font-style:normal;
     color: black;
-    float: right;
-    margin: 0;
-    padding: 0;
 }
 
 .tab-content {
@@ -292,11 +299,6 @@ a {
 .tab-content p {
     font-size: 25px;
     letter-spacing: 1px;
-}
-
-.desktop-icon {
-    margin-bottom: 20px;
-    margin-right: 30px;
 }
 
 .desktop-icon img {
@@ -410,18 +412,21 @@ figcaption {
     position: fixed;
     z-index: 1;
     top: 5vh;
-    left: 10vw;
+    left: 5vw;
     overflow-y:hidden;
     text-align: center;
     text-align: left;;
 }
 
 .projects h2 {
+    font-size: 27px;
+    color:rgb(19, 73, 166);
     padding: 0 0 7px;
     margin: 0;
 }
 
 .projects p {
+    font-size: 25px;
     margin: 0;
     padding: 0;
 }
@@ -528,7 +533,6 @@ footer .music-box {
     padding-bottom: 0px;
     text-shadow: 2px 2px 1px black;
 }
-
 
 footer #clock {
     font-size: 20px;

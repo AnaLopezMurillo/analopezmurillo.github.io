@@ -1,7 +1,7 @@
 // movement functions
 
 // automate this to grab any the first class of any tab div
-const tabNames = ['about', 'research', 'desktop', 'projects']
+const tabNames = ['about', 'research', 'desktop', 'projects', 'site']
 
 $(document).ready(function() {
     for (let tab in tabNames) {
