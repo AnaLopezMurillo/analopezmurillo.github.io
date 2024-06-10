@@ -273,7 +273,6 @@ a {
     height: 400px;
     top: 10vh;
     left: 55vw;
-    overflow-y: scroll;
 }
 
 .desktop-icon {

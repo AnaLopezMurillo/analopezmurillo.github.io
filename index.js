@@ -126,7 +126,8 @@ let playButton = document.getElementsByClassName('play-button first')[0];
 let songDiv = document.getElementsByClassName('song-name')[1];
 const musicLibrary = {
     "Attitude - Luxury Elite": "./static/music/Attitude.mp3",
-    "Slice of Paradise - Karl Casey" : "./static/music/SliceofParadise.mp3",
+    "Second Floor - 猫 シ Corp.": "./static/music/SecondFloor.mp3",
+    "Slice of Paradise - Karl Casey" : "./static/music/SliceofParadise.mp3"
 }
 let songNames = Object.keys(musicLibrary);
 let songSrc = Object.values(musicLibrary);
@@ -160,5 +161,7 @@ skipButton.addEventListener("click", function(event) {
     } else {
         i+=1;
     }
-    music.currentSrc = songSrc[i];
+    music.src = songSrc[i];
+    songDiv.innerHTML = songNames[i];
+    music.play();
 })
