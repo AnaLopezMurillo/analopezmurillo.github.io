@@ -2,11 +2,18 @@
 
 // automate this to grab any the first class of any tab div
 const tabNames = ['about', 'research', 'desktop', 'projects', 'site']
+let tops = [];
+let lefts = [];
 
 $(document).ready(function() {
     for (let tab in tabNames) {
         let tabName = "." + tabNames[tab];
         let tabEl = $(tabName);
+        let window_tabEl = window.getComputedStyle(document.getElementsByClassName(tabNames[tab])[0]);
+        
+        tops.push(window_tabEl.top);
+        lefts.push(window_tabEl.left);
+
         tabEl.draggable({
             start: function() {
                 bringToFront(tabEl);
@@ -37,6 +44,11 @@ for (let b of exitButtons) {
         let tab = b.parentElement.parentElement;
         tab.style.visibility = "none";
         tab.style.display = "none";
+
+        // reset initial position
+        let i = tabNames.indexOf(tab.classList[0].toString());
+        tab.style.top = tops[i];
+        tab.style.left = lefts[i];
 
     })
 }
@@ -127,7 +139,7 @@ let songDiv = document.getElementsByClassName('song-name')[1];
 const musicLibrary = {
     "Attitude - Luxury Elite": "./static/music/Attitude.mp3",
     "Second Floor - 猫 シ Corp.": "./static/music/SecondFloor.mp3",
-    "Slice of Paradise - Karl Casey" : "./static/music/SliceofParadise.mp3"
+    "Slice of Paradise - Karl Casey" : "./static/music/SliceofParadise.mp3",
 }
 let songNames = Object.keys(musicLibrary);
 let songSrc = Object.values(musicLibrary);

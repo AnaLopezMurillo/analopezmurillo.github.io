@@ -86,7 +86,7 @@ a {
 
 .tab-header {
     width: inherit;
-    z-index: 3;
+    z-index: 1;
     height: 30px;
     overflow: hidden;
     background:
@@ -99,7 +99,7 @@ a {
 }
 
 .tab-header p {
-    z-index: 3;
+    z-index: 1;
     font-size: 18px;
     font-weight: bold;
     padding: 3px 0px;
@@ -316,14 +316,15 @@ a {
 /* Research Tab */
 
 .research {
-    width: 900px;
+    width: 990px;
     height: 600px;
     display:block;
     visibility: hidden;
-    z-index: 4;
+    z-index: 1;
     top: 20vh;
     left: 10vw;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .research h1 {
@@ -405,7 +406,7 @@ figcaption {
 .projects {
     width: 1000px;
     height: 800px;
-    display:block;
+    display:hidden;
     visibility: visible;
     background-color:#ffffff;
     position: fixed;
