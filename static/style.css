@@ -367,27 +367,28 @@ figcaption {
 
 /* Site Specs */
 .site {
-    width: 370px;
-    height: 400px;
+    width: 300px;
+    height: 370px;
     display:block;
     visibility: hidden;
     background-color:#e2e1e1;
     position: fixed;
     z-index: 1;
     top: 40vh;
-    left: 20vw;
+    left: 10vw;
     overflow-y:hidden;
     text-align: center;
 }
 
 .site .content {
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin: 2rem 5px;
     color: black;
 }
 
 .site p {
-    margin: 0px 5px;
-    font-size: 20px;
+    margin: 0px 2px;
+    font-size: 17px;
 }
 
 .site a {
@@ -399,7 +400,17 @@ figcaption {
 }
 
 .site h1 {
-    margin-top: 0px;
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.site .music {
+    margin-top: 12px;
+}
+
+.site .icons {
+    margin-top: 10px;
 }
 
 /* Projects Tab */
@@ -426,7 +437,7 @@ figcaption {
 }
 
 .projects p {
-    margin-top: 10px;
+    margin-top: 8px;
     padding: 0;
 }
 
