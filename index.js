@@ -1,7 +1,7 @@
 // movement functions
 
 // automate this to grab any the first class of any tab div
-const tabNames = ['about', 'research', 'desktop', 'projects', 'site']
+const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather']
 let tops = [];
 let lefts = [];
 
@@ -18,7 +18,7 @@ $(document).ready(function() {
             start: function() {
                 bringToFront(tabEl);
             }
-        }).resizable({});
+        });
     }
 });
 
@@ -31,7 +31,7 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    $(".desktop, .about, .research, .site, .projects").css("z-index", 1);
+    $(".desktop, .about, .research, .site, .projects, .weather").css("z-index", 1);
     el.css("z-index", 2);
 }
 
@@ -73,7 +73,7 @@ icon_container.addEventListener("dblclick", function(event) {
 
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');
-desktop_icons.addEventListener("click", function(event) {
+desktop_icons.addEventListener("dblclick", function(event) {
     const icon = event.target.closest(".icon")
     if (!icon) return;
     for (let tab of tabs) {

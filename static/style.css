@@ -166,18 +166,39 @@ a {
     color: white;
 }
 
-/* About Tab Styling */
+/* Weather Tab */
+.weather {
+    display: block;
+    visibility: hidden;
+    z-index: 1;
+    position: fixed;
+    width: 49vw;
+    height: 55vh;
+    bottom: 10vh;
+    left: 5vw;
+}
 
+.weather iframe {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    position: absolute;
+    width: 200%;
+    height: 190%;
+}
+
+
+
+/* About Tab Styling */
 .about {
     display: block;
     visibility: visible;
     z-index: 1;
     position: fixed;
-    width: 630px;
-    height: 540px;
+    width: 45vw;
+    height: 67vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    bottom: 23vh;
+    bottom: 20vh;
     left: 25vw;
 }
 
@@ -316,13 +337,13 @@ a {
 /* Research Tab */
 
 .research {
-    width: 990px;
-    height: 600px;
+    width: 55vw;
+    height: 70vh;
     display:block;
     visibility: hidden;
-    z-index: 1;
-    top: 20vh;
-    left: 10vw;
+    z-index:g g1;
+    top: 16vh;
+    left: 5vw;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -415,16 +436,17 @@ figcaption {
 
 /* Projects Tab */
 .projects {
-    width: 1000px;
-    height: 800px;
-    display: hidden;
+    width: 60vw;
+    height: 80vh;
+    display:hidden;
     visibility: visible;
     background-color:#ffffff;
     position: fixed;
     z-index: 1;
     top: 5vh;
-    left: 5vw;
-    overflow-y:hidden;
+    left: 4vw;
+    overflow-y:scroll;
+    overflow-x: hidden;
     text-align: center;
     text-align: left;;
 }
@@ -432,12 +454,15 @@ figcaption {
 .projects h2 {
     font-size: 30px;
     color:rgb(19, 73, 166);
-    padding: 0 0 7px;
+    padding: 0 0 0px;
     margin: 0;
 }
 
-.projects p {
-    margin-top: 8px;
+.projects .content a {
+    color:rgb(19, 73, 166);}
+
+.projects .content p {
+    margin-top: 3px;
     padding: 0;
 }
 
@@ -447,6 +472,10 @@ figcaption {
     font-weight: lighter;
     margin: 0;
     padding: 0;
+}
+
+.projects .caption.last {
+    padding-bottom: 5px;
 }
 
 .projects .bold {
@@ -473,6 +502,10 @@ footer {
     border-color: rgba(0, 0, 0, 0);
     background-color: #C5C5C5;
     float:left;
+}
+
+footer .windows-large {
+    margin-bottom: 10px;
 }
 
 .windows-button:active {
