@@ -438,17 +438,27 @@ figcaption {
 .projects {
     width: 60vw;
     height: 80vh;
-    display:hidden;
+    display:block;
     visibility: visible;
     background-color:#ffffff;
     position: fixed;
     z-index: 1;
     top: 5vh;
     left: 4vw;
-    overflow-y:scroll;
     overflow-x: hidden;
+    overflow-y: auto;
     text-align: center;
     text-align: left;;
+}
+
+.project.ui-resizable {
+    z-index: 2;
+    position: fixed;
+}
+
+.projects .content {
+    z-index: -1;
+    overflow-y:scroll;
 }
 
 .projects h2 {
@@ -482,6 +492,9 @@ figcaption {
     font-weight: bold;
 }
 
+.projects p img {
+    width: 100%;
+}
 /* Footer Styling */
 
 footer {
@@ -490,6 +503,7 @@ footer {
     min-height: 24px;
     background: #C5C5C5;
     bottom:0;
+    z-index: 50;
 }
 
 .windows-button {
