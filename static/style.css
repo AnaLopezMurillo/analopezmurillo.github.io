@@ -494,6 +494,8 @@ figcaption {
 
 .projects p img {
     width: 100%;
+    padding: 12px 0 12px;
+    border-radius: 20px;
 }
 /* Footer Styling */
 

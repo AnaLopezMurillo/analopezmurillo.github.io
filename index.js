@@ -57,7 +57,7 @@ for (let b of exitButtons) {
 let icon_container = document.querySelector('.icons-column');
 const tabs = document.getElementsByClassName('tab');
 
-icon_container.addEventListener("dblclick", function(event) {
+icon_container.addEventListener("click", function(event) {
     const icon = event.target.closest(".icon");
     if (!icon) return;
 
@@ -73,7 +73,7 @@ icon_container.addEventListener("dblclick", function(event) {
 
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');
-desktop_icons.addEventListener("dblclick", function(event) {
+desktop_icons.addEventListener("click", function(event) {
     const icon = event.target.closest(".icon")
     if (!icon) return;
     for (let tab of tabs) {
