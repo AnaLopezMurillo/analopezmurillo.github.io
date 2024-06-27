@@ -166,8 +166,17 @@ playButton.addEventListener("click", function() {
     songDiv.innerHTML = songNames[i];
 })
 
+// listen for end of current song
+playButton.addEventListener("ended", function(event) {
+    playNext();
+})
+
 let skipButton = document.getElementsByClassName('skip play-button')[0];
 skipButton.addEventListener("click", function(event) {
+    playNext();
+})
+
+let playNext = function() {
     if (songSrc.length - 1 == i) {
         i = 0;
     } else {
@@ -176,4 +185,4 @@ skipButton.addEventListener("click", function(event) {
     music.src = songSrc[i];
     songDiv.innerHTML = songNames[i];
     music.play();
-})
+}
