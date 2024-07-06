@@ -496,6 +496,10 @@ figcaption {
     border-radius: 20px;
 }
 
+.projects p img.csxl {
+    width: 24%;
+}
+
 /* Recycling Tab */
 
 
