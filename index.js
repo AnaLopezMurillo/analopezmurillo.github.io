@@ -1,7 +1,7 @@
 // movement functions
 
 // automate this to grab any the first class of any tab div
-const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather']
+const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather', 'recycling']
 let tops = [];
 let lefts = [];
 
@@ -31,7 +31,7 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    $(".desktop, .about, .research, .site, .projects, .weather").css("z-index", 1);
+    $(".desktop, .about, .research, .site, .projects, .weather, .recycling").css("z-index", 1);
     el.css("z-index", 2);
 }
 
