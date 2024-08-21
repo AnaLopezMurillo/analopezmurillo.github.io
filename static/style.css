@@ -288,7 +288,7 @@ a {
     overflow-y:hidden;
     position: fixed;
     z-index: 1;
-    width: 416px;
+    width: 30vw;
     height: 320px;
     top: 8vh;
     left: 57vw;
@@ -434,7 +434,7 @@ figcaption {
 
 /* Projects Tab */
 .projects {
-    width: 60vw;
+    width: 80vw;
     height: 80vh;
     display:hidden;
     visibility: visible;
