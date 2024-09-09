@@ -339,8 +339,8 @@ a {
     height: 70vh;
     display:block;
     visibility: hidden;
-    z-index:g g1;
-    top: 16vh;
+    z-index:1;
+    top: 8vh;
     left: 5vw;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -434,7 +434,7 @@ figcaption {
 
 /* Projects Tab */
 .projects {
-    width: 80vw;
+    width: 60vw;
     height: 80vh;
     display:hidden;
     visibility: visible;
