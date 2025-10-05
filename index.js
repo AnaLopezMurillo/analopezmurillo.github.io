@@ -1,7 +1,7 @@
 // movement functions
 
 // automate this to grab any the first class of any tab div
-const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather', 'recycling']
+const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather', 'recycling', 'minesweeper']
 let tops = [];
 let lefts = [];
 

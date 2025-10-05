@@ -10,6 +10,7 @@
 
     <!--Custom JavaScript-->
     <script src="./index.js" defer></script>
+    <script src="./minesweeper.js"></script>
 
     <!-- jQuery-->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
@@ -22,6 +23,8 @@
     <title>Ana Lopez Murillo</title>
 </head>
 <body>
+    <!--Todo: make jquery local?-->
+
     <header></header>
     <main>
         <!--Icons (left)-->
@@ -46,10 +49,16 @@
                 <h1 class="child">LinkedIn</h1>
             </a>
 
+            <div class="draggable icon" id="minesweeper">
+                <img src="https://win98icons.alexmeub.com/icons/png/minesweeper-0.png">
+                <h1 class="child">Minesweeper</h1>
+            </div>
+
             <div class="draggable icon" id="site">
                 <img src="./static/icons/sitespecsLarge.png">
                 <h1 class="child">Site Specs</h1>
             </div>
+            
 
             <div class="draggable icon" d="recycling">
                 <img src="./static/icons/RecycleLarge.png" i>
@@ -108,25 +117,25 @@
             <div class="content">
                 <div class="tab-content first">
                     <img class="header-img" src="./static/AILM_Headshot.jpg">
-                    <p>Hello! <br> My name is <span class="name">Isabel Lopez Murillo</span>, and I am an honors student and Chancellor's Science Scholar studying Computer Science (B.S.) and Astrophysics at the University of North Carolina at Chapel Hill.</p>
+                    <p>Hello! <br> My name is <span class="name">Isabel Lopez Murillo</span>, and I am a Physics and Astronomy graduate student at UNC-Chapel HIll. <br> I am currently a research assistant on the <span><a style="color: #0b2585"href="https://andrewwmann.com/youngworldslab.html">Young Worlds Lab</a> </span> team, focusing on computational astronomy and AI/ML techniques applied to physics.</p>
                 </div>
                 <div class="tab-content" id="about-content">
                     <p>
-                        When I'm not in the classroom, I'm probably working on my <span>research</span> project, where I study exoplanets using their gravitational interactions:
+                        My <span>research</span> interests include young star and exoplanet analysis and discovery. I currently work on gleaning Transit Timing Variations (TTVs) from young systems and photometry analysis:
                     </p>
                     <div class="callout icon" id="research">
                         <img src="./static/gifs/planet.gif">
                         <h1>Research</h1>
                     </div>
                     <p>
-                        I also work as a <span>website developer and graphics artist</span> for organizations on-campus and personal projects (like this website!)
+                        I also work as a <span>website developer and graphics artist</span> for organizations and professional astronomy art:
                     </p>
                     <div class="callout icon" id="projects">
                         <img src="./static/gifs/blobpaint.gif">
                         <h1>Projects</h1>
                     </div>
                     <p>
-                        You can  also find my professional and technical experience outlined in my <span>resume</span>!
+                        You can  also find my professional and technical experience outlined in my <span>resume and CV</span>!
                     </p>
                     <a href="./static/files/AnaLopezMurillo_Resume.pdf" target="_blank"> 
                         <div class="callout icon" id="resume">
@@ -155,15 +164,11 @@
                 <div class="exit">X</div>
             </div>
             <div class="content">
-                <div class="tab-content">
+                <div class="tab-scontent">
                     <h1>Research</h1>
                     <p>
-                        As an undergraduate researcher in the <span><a href="https://andrewwmann.com/youngworldslab.html" target="_blank">Young Worlds Lab</a></span> led by Dr. Andrew Mann at UNC-Chapel Hill, I lead my own research project studying transit timing variations (TTVs) of exoplanets in young star systems. 
-                        <br><br>
-                        An exoplanet, or extrasolar planet, is a planet outside our Solar System revolving around a star other than our Sun. The hunt for exoplanets has been a topic of interest in Astronomy and Physics research for decades, helping contribute to the ongoing search for extraterrestrial life and questions about the formation of our Earth.  
-                        <br><br>
-                        To find an exoplanet, we observe the amount of light visible from a star over time, resulting in a graph called a lightcurve. A dip in the light of this graph can be the indication of an exoplanet, and can tell us about the planet's period, radius, distance from its star, etc.
-                        <figure>
+                        As an graduate researcher in the <span><a href="https://andrewwmann.com/youngworldslab.html" target="_blank">Young Worlds Lab</a></span> led by Dr. Andrew Mann at UNC-Chapel Hill, I work on studying young exoplanets and star systems. 
+                        
                             <img src="./static/gifs/lighcurve.gif">
                             <figcaption>Image credit: University of Hertfordshire</figcaption>
                         </figure>
@@ -185,7 +190,7 @@
                         </figure>
                     </p>
                     <p>
-                        We are currently working through our survey of planets, and are simultaneously writing a paper with our results. I have had the opportunity to contribute to TTV analyses for exoplanet discovery papers published in The Astronomical Journal and Nature such as <span><a href="https://arxiv.org/abs/2406.05234" target="_blank">Thao et. al 2024</a></span> for TOI-1224 c and <span><a href="https://www.nature.com/articles/s41586-024-08123-3" target="_blank">Barber et. al 2024</a></span> for IRAS 04125+2902 b, and have presented my findings thus far at the <span><a href="https://our.unc.edu/abstract/lopez-murillo-searching-for-transit-timing-variations-in-young-planetary-systems/" target="_blank">Celebration of Undergraduate Research</a></span> at UNC-Chapel Hill, as well as the Chancellor's Science Scholars Undergraduate Research Symposium.
+                        We are currently working through our survey of planets, and are simultaneously writing a paper with our results. <!--ADD REF TO PAPER--> I have had the opportunity to contribute to TTV analyses for exoplanet discovery papers published in The Astronomical Journal and Nature such as <span><a href="https://arxiv.org/abs/2406.05234" target="_blank">Thao et. al 2024</a></span> for TOI-1224 c and <span><a href="https://www.nature.com/articles/s41586-024-08123-3" target="_blank">Barber et. al 2024</a></span> for IRAS 04125+2902 b, and have presented my findings thus far at the <span><a href="httpfs://our.unc.edu/abstract/lopez-murillo-searching-for-transit-timing-variations-in-young-planetary-systems/" target="_blank">Celebration of Undergraduate Research</a></span> at UNC-Chapel Hill, as well as the Chancellor's Science Scholars Undergraduate Research Symposium.
                     </p>
                 </div>
 
@@ -213,7 +218,7 @@
                     Above: demo displaying our Friendship functionality addition and process of searching for a student to friend and viewing/accepting friend request.
                     </p>
 
-                    <h2>2023 Pearl Hacks Website</h2>
+                    <h2>2024, 2025 Pearl Hacks Websites</h2>
                     <p class="caption">Role: Graphic Design, Illustration</p>
                     <p class="caption last">Adobe Illustrator, Figma</p>
                     <p>
@@ -222,6 +227,7 @@
                         &emsp;As Director of Design, I lead development on Pearl Hacks' art direction, illustrations, promotional materials, and graphic design. Graphics were illustrated using Adobe Illustrator and Figma.
                         <img src="./static/images/ph23.png">
                         <img src="./static/images/ph23_night.png">
+                        <img src="./static/images/ph24.png">
                     </p>
 
                     <h2>iGEM Wikis</h2>
@@ -234,7 +240,6 @@
                         <a href="https://2023.igem.wiki/unc-chapelhill/" target="_blank">
                             <img src="./static/images/igem2023.png">
                         </a>
-                        
                     </p>
 
                     <h2>DMARC Analyzer</h2>
@@ -292,7 +297,6 @@
             </div>
 
         </div>
-
         <!--Weather-->
         <div class="weather tab draggable" id="weather-tab">
             <div class="tab-header">
@@ -315,7 +319,20 @@
             </div>
             <div class="content"></div>
 
-y        </div>
+        </div>
+
+        <!--Minesweeper-->
+        <!-- <div class="minesweeper tab draggable resizable" id="minesweeper-tab">
+            <div class="tab-header">
+                <img src="./static/icons/DesktopSmall.png">
+                <p>Minesweeper</p>
+                <div class="exit">X</div>
+            </div>
+            <div class="content">
+            
+            </div>
+        </div> -->
+        
 
     </main>
     <footer>
