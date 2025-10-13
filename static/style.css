@@ -452,6 +452,8 @@ figcaption {
 .projects {
     width: 60vw;
     height: 80vh;
+    /* visibility:visible; */
+    /* display:block; */
     display:hidden;
     visibility: visible;
     background-color:#ffffff;
