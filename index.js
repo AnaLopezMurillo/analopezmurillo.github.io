@@ -74,6 +74,7 @@ icon_container.addEventListener("click", function(event) {
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');
 desktop_icons.addEventListener("click", function(event) {
+    console.log("clicked");
     const icon = event.target.closest(".icon")
     if (!icon) return;
     for (let tab of tabs) {
