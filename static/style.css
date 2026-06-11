@@ -518,6 +518,18 @@ figcaption {
     width: 24%;
 }
 
+.projects p.art-container {
+    display:block;
+    flex-direction: row;
+    text-align: center;
+}
+
+.projects p img.art {
+    width: 32%;
+    border-radius: 20px;
+    
+}
+
 /* Recycling Tab */
 
 /* Minesweeper Tab Styling */
