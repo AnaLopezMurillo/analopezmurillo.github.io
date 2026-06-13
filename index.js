@@ -74,15 +74,15 @@ icon_container.addEventListener("click", function(event) {
     }
 })
 
-// add click event listener
-for (let tab of tabs) {
-    tab.addEventListener("click", function(event) {
-        console.log('tab clicked');
-        console.log(tab.classList[0]);
-        el = $('.' + tab.classList[0])
-        bringToFront(el);
-    })
-}
+// // add click event listener
+// for (let tab of tabs) {
+//     tab.addEventListener("click", function(event) {
+//         console.log('tab clicked');
+//         console.log(tab.classList[0]);
+//         el = $('.' + tab.classList[0])
+//         bringToFront(el);
+//     })
+// }
 
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');
