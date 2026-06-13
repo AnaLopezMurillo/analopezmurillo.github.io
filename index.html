@@ -62,7 +62,7 @@
             </div>
             
 
-            <div class="draggable icon" d="recycling">
+            <div class="draggable icon" id="recycling">
                 <img src="./static/icons/RecycleLarge.png" i>
                 <h1 class="child">Recycling Bin</h1>
             </div>
@@ -226,7 +226,7 @@
                     <p class="caption"> </p>
                     <p class="caption">Solo Project</p>
                     <p class="caption last">Procreate, Adobe Illustrator, Photoshop</p>
-                    <p>&emsp;I enjoy bringing my passion for creative work to science applications, through commissioned astronomy artwork for PhD graduation gifts and promotional artwork. Examples of my work are included below:
+                    <p>&emsp;I enjoy bringing my passion for creative work to science applications, through commissioned astronomy artwork for PhD graduations and promotional artwork. Examples of my work are included below:
                     </p>
                     <p class="art-container">
                         <img class="art" src="./static/images/posters/pachia.png">
@@ -284,6 +284,8 @@
                     <p class="caption last">HTML/CSS, Javascript</p>
                     <p>
                         &emsp;This website! This is a personal project I completed in a few months during summer 2024 while preparing to apply to graduate school and industry jobs. This site uses pure HTML/CSS and both custom JavaScript as well as jQuery for movement functionality. I wanted to work on a project that encapsulates both my personality and my love for 90s style interfaces and graphic design in a readable and fun-to-use personal website portfolio. The design and interface were modeled after the Windows 98 operating system, and all tab/footer design and stylization was done using custom CSS. 
+                        <br>
+                        This website was developed using NO AI and coded solely by hand using grit and Windows 98 reverse engineering.
                         <img src="./static/images/PersonalWebsite.png">
                     </p>
 
@@ -308,7 +310,7 @@
             </div> 
             <div class="content">
                 <h1>Site Specifications</h1>
-                <p>This website was developed by Ana Isabel Lopez Murillo and is hosted under a <br><span><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0 license</a></span>.</p>
+                <p>This website was developed solely by Ana Isabel Lopez Murillo and is hosted under a <br><span><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0 license</a></span>.</p>
                 <p>You can find the repository used to create this website <span><a href="https://github.com/AnaLopezMurillo/anaisabellopez.github.io" target="_blank">here</a></span>.</p>
                 <p class="music">
                     Music used:
@@ -338,13 +340,37 @@
             </div>
         </div>
 
-        <div class="recycling tab draggable" id="recycling-tab">
+        <!--Recyling Bin-->
+        <div class="recycling tab resizable draggable" id="recycling-tab">
             <div class="tab-header">
                 <img src="./static/icons/RecycleSmall.png">
                 <p>Recycling Bin</p>
                 <div class="exit">X</div>
             </div>
-            <div class="content"></div>
+            <div class="content">
+                <div class="box-container">
+                    <div class="file-header">
+                        <button><span style="text-decoration:underline">F</span>ile</button>
+                        <button><span style="text-decoration:underline">E</span>dit</button>
+                        <button><span style="text-decoration:underline">V</span>iew</button>
+                        <button><span style="text-decoration:underline">G</span>o</button>
+                        <button><span style="text-decoration:underline">F</span>avorites</button>
+                        <button><span style="text-decoration:underline">H</span>elp</button>
+                    </div>
+                    <p></p>
+                    <div class="recycle-contentcontainer">
+                        <div class="inside-content left">
+                            <h1>Recycle Bin</h1>
+                            <p>This foler contains files that you have deleted.</p>
+                        </div>
+                        <div class="inside-content right">
+                            <span>aaaaaaaa</span>
+                        </div>
+                    </div>
+                </div>
+            
+
+            </div>
 
         </div>
 
@@ -359,7 +385,7 @@
             
             </div>
         </div> -->
-        
+
 
     </main>
     <footer>

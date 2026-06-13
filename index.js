@@ -5,6 +5,8 @@ const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather',
 let tops = [];
 let lefts = [];
 
+
+
 $(document).ready(function() {
     for (let tab in tabNames) {
         let tabName = "." + tabNames[tab];
@@ -31,6 +33,7 @@ $( function() {
 } );
 
 function bringToFront(el) {
+    console.log(el);
     $(".desktop, .about, .research, .site, .projects, .weather, .recycling").css("z-index", 1);
     el.css("z-index", 2);
 }
@@ -69,7 +72,17 @@ icon_container.addEventListener("click", function(event) {
             bringToFront(el);
         }
     }
-}) 
+})
+
+// add click event listener
+for (let tab of tabs) {
+    tab.addEventListener("click", function(event) {
+        console.log('tab clicked');
+        console.log(tab.classList[0]);
+        el = $('.' + tab.classList[0])
+        bringToFront(el);
+    })
+}
 
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');

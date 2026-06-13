@@ -186,10 +186,12 @@ a {
     height: 190%;
 }
 
+
+
 /* About Tab Styling */
 .about {
     display: block;
-    visibility: visible;
+    visibility: hidden;
     z-index: 1;
     position: fixed;
     width: 45vw;
@@ -202,6 +204,7 @@ a {
 
 .content {
     margin-top: 24px;
+    overflow-x: hidden;
 }
 
 .about .tab-content {
@@ -527,10 +530,88 @@ figcaption {
 .projects p img.art {
     width: 32%;
     border-radius: 20px;
-    
 }
 
-/* Recycling Tab */
+/* Recycling Tab Styling */
+.recycling {
+    display: block;
+    visibility: visible;
+    position:fixed;
+    background-color:#B0B0B0;
+    z-index: 1;
+    position: fixed;
+    width: 40vw;
+    height: 45vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    bottom: 20vh;
+    left: 15vw;
+}
+
+
+.box-container {
+    display:flex;
+    flex-direction:column;
+    float:left;
+    width:100%;
+    align-items:flex-start;
+}
+
+
+.file-header {
+    background-color:#E1E1E1;
+    color:black;
+    position:absolute;
+    height: 20px;
+    display:flex;
+    flex-direction: row;
+    float:left;
+    font-weight: bolder;
+    padding: 5px 15px;
+    letter-spacing: 3px;
+    padding-right: 45vh;
+    box-shadow: inset -1px -1px 2px #909090;
+    border:1px white solid;
+    z-index:2;
+}
+
+.recycle-contentcontainer {
+    display:flex; 
+    flex-direction: row;
+    color:black;
+    width: 100%;
+    /* padding: 100%; */
+    height: 10%;
+    background-color: white;
+}
+
+.recycle-contentcontainer .inside-content {
+    display:block;
+    align-items: center;
+    flex-direction:row;
+    text-align:center;
+    width: 100%;
+}
+
+.recycle-contentcontainer .left {
+    width:40%;
+    background-color: red;
+    float:left;
+}
+
+.recycle-contentcontainer .right {
+    width:60%;
+    background-color: blue;
+    float:right;
+}
+
+
+.file-header button {
+    font-size: 15px;
+    background-color:#01077e00;
+    border: none;
+    font-family: 'windows-regular';
+}
 
 /* Minesweeper Tab Styling */
 
