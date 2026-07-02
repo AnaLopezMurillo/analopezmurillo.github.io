@@ -1,7 +1,7 @@
 // movement functions
 
 // automate this to grab any the first class of any tab div
-const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather']
+const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather', 'recycling']
 let tops = [];
 let lefts = [];
 
@@ -33,7 +33,6 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    console.log(el);
     $(".desktop, .about, .research, .site, .projects, .weather, .recycling").css("z-index", 1);
     el.css("z-index", 2);
 }
@@ -77,8 +76,6 @@ icon_container.addEventListener("click", function(event) {
 // add click event listener
 for (let tab of tabs) {
     tab.addEventListener("click", function(event) {
-        console.log('tab clicked');
-        console.log(tab.classList[0]);
         el = $('.' + tab.classList[0])
         bringToFront(el);
     })
@@ -87,7 +84,6 @@ for (let tab of tabs) {
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');
 desktop_icons.addEventListener("click", function(event) {
-    console.log("clicked");
     const icon = event.target.closest(".icon")
     if (!icon) return;
     for (let tab of tabs) {
