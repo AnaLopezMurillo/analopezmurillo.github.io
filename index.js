@@ -1,10 +1,9 @@
 // movement functions
 
 // automate this to grab any the first class of any tab div
-const tabNames = ['about', 'research', 'desktop', 'projects', 'site', 'weather', 'recycling']
+const tabNames = ['research', 'desktop', 'projects', 'site', 'weather', 'recycling']
 let tops = [];
 let lefts = [];
-
 
 
 $(document).ready(function() {
@@ -74,12 +73,12 @@ icon_container.addEventListener("click", function(event) {
 })
 
 // add click event listener
-for (let tab of tabs) {
-    tab.addEventListener("click", function(event) {
-        el = $('.' + tab.classList[0])
-        bringToFront(el);
-    })
-}
+// for (let tab of tabs) {
+//     tab.addEventListener("click", function(event) {
+//         el = $('.' + tab.classList[0])
+//         bringToFront(el);
+//     })
+// }
 
 // desktop tab listener
 let desktop_icons = document.querySelector('.content');
