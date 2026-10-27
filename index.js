@@ -32,7 +32,7 @@ $( function() {
 } );
 
 function bringToFront(el) {
-    $(".desktop, .about, .research, .site, .projects, .weather, .recycling").css("z-index", 1);
+    $(".tab").not(".init").css("z-index", 1);
     el.css("z-index", 2);
 }
 
@@ -43,7 +43,7 @@ for (let b of exitButtons) {
     b.addEventListener("click", function(event) {
         // exit out of clicked tab
         let tab = b.parentElement.parentElement;
-        tab.style.visibility = "none";
+        tab.style.visibility = "hidden";
         tab.style.display = "none";
 
         // reset initial position
@@ -54,61 +54,36 @@ for (let b of exitButtons) {
     })
 }
 
+function openTab(icon) {
+    const tab = document.getElementById(icon.id + "-tab")
+    if (!tab) return;
+    tab.style.visibility = 'visible';
+    tab.style.display = 'block';
+    bringToFront($(tab));
+}
+
+document.addEventListener("click", function(event) {
+    const icon = event.target.closest(".icon");
+    if (icon) {
+        openTab(icon);
+        return;
+    }
+    const tab = event.target.closest('.tab');
+    if (tab) bringToFront($(tab));
+
+})
+
 // icon container listener (left)
 let icon_container = document.querySelector('.icons-column');
 const tabs = document.getElementsByClassName('tab');
 
-icon_container.addEventListener("click", function(event) {
-    const icon = event.target.closest(".icon");
-    if (!icon) return;
-
-    for (let tab of tabs) {
-        if (tab.id === icon.id + "-tab") {
-            tab.style.visibility = "visible";
-            tab.style.display = "block";
-            let el = $("#" + icon.id + "-tab");
-            bringToFront(el);
-        }
-    }
-})
-
 // add click event listener
-// for (let tab of tabs) {
-//     tab.addEventListener("click", function(event) {
-//         el = $('.' + tab.classList[0])
-//         bringToFront(el);
-//     })
-// }
-
-// desktop tab listener
-let desktop_icons = document.querySelector('.content');
-desktop_icons.addEventListener("click", function(event) {
-    const icon = event.target.closest(".icon")
-    if (!icon) return;
-    for (let tab of tabs) {
-        if (tab.id === icon.id + "-tab") {
-            tab.style.visibility = "visible";
-            tab.style.display = "block";
-            let el = $("#" + icon.id + "-tab");
-            bringToFront(el);
-        }
-    }
-})
-
-// about tab listener 
-let about_icons = document.querySelector('#about-content');
-about_icons.addEventListener("click", function(event) {
-    const icon = event.target.closest(".icon");
-    if (!icon) return;
-    for (let tab of tabs) {
-        if (tab.id === icon.id + "-tab") {
-            tab.style.visibility = "visible";
-            tab.style.display = "block";
-            let el = $("#" + icon.id + "-tab");
-            bringToFront(el);
-        }
-    }
-})
+for (let tab of tabs) {
+    tab.addEventListener("click", function(event) {
+        let el = $('.' + tab.classList[0])
+        bringToFront(el);
+    })
+}
 
 // footer functions
 let windowsButton = document.getElementsByClassName('windows-button')[0];
@@ -176,7 +151,7 @@ playButton.addEventListener("click", function() {
 })
 
 // listen for end of current song
-playButton.addEventListener("ended", function(event) {
+music.addEventListener("ended", function(event) {
     playNext();
 })
 

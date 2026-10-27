@@ -648,6 +648,47 @@ figcaption {
     font-family: 'windows-regular';
 }
 
+/* Help/Init Tab Styling */
+.help {
+    display: block;
+    visibility: visible;
+    position: fixed;
+    z-index: 3;
+    width: 16vw;
+    height: 330px;
+    bottom: 12vh;
+    right: 9vw;
+    background-color:#e2e1e1;
+    overflow-y:hidden;
+    text-align: center;
+}
+
+.help h1 {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.help .content {
+    margin-top: 2rem;
+    margin: 2rem 5px;
+    color: black;
+}
+
+.help p {
+    margin: 0px 4px;
+    font-size: 17px;
+}
+
+.help a {
+    color:rgb(19, 73, 166)
+}
+
+.help a:hover {
+    color:rgb(94, 138, 214);
+}
+
+
 /* Minesweeper Tab Styling */
 
 .minesweeper {
