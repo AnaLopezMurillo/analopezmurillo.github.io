@@ -1,4 +1,6 @@
-// movement functions
+// change the cursor
+$('html').css({'cursor': 'url("static/cursor.cur"), default'});
+// movement functions 
 
 // automate this to grab any the first class of any tab div
 const tabNames = ['research', 'desktop', 'projects', 'site', 'weather', 'recycling']
