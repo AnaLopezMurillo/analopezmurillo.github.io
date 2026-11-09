@@ -84,14 +84,14 @@ a {
 
 .tab-header {
     width: inherit;
-    z-index: 1;
-    height: 24px;
+    z-index: 5;
+    height: 28px;
     overflow: hidden;
     background:
         linear-gradient(to right, #01087E,#3A7DC7);
     border-color: #C5C5C5;
-    border-width: 2px;
-    border-style:solid;
+    /* border-width: 2px;
+    border-style:solid; */
     position: fixed;
     cursor: pointer;
 }
@@ -127,10 +127,11 @@ a {
     position: absolute;
     position: fixed;
     direction:ltr;
-    background-color: #FFFFFF;
-    border-color: black;
-    border-width: 2px;
+    background-color: white;
+    border-color: #C5C5C5;
+    border-width: 3px;
     border-style:solid;
+    box-shadow: 2px 2px 2px black;
 }
 
 .tab .content {
@@ -177,8 +178,8 @@ a {
     visibility: hidden;
     z-index: 1;
     position: fixed;
-    width: 47vw;
-    height: 53vh;
+    width: 38vw;
+    height: 48vh;
     bottom: 10vh;
     left: 5vw;
 }
@@ -298,7 +299,7 @@ a {
     overflow-y:hidden;
     position: fixed;
     z-index: 1;
-    width: 30vw;
+    width: 28vw;
     height: 320px;
     top: 8vh;
     left: 57vw;
@@ -547,8 +548,8 @@ figcaption {
     background-color:#B0B0B0;
     z-index: 1;
     position: fixed;
-    width: 33vw;
-    height: 45vh;
+    width: 28vw;
+    height: 40vh;
     overflow-x: hidden;
     bottom: 20vh;
     left: 15vw;
@@ -560,20 +561,21 @@ figcaption {
     align-content: center;
     text-align: center;
     margin-left: 10px;
+    z-index: 0;
 }
 
 .recycling .item .desc {
     font-size: larger;
     font-weight:bold;
-    text-align: center;
+    text-align: centefr;
     align-self:baseline;
 }
 
 .recycling .item img {
     /* width: 100px; */
     max-height: 100px;
+    z-index:0;
 }
-
 
 .box-container {
     display:flex;
@@ -581,6 +583,15 @@ figcaption {
     float:left;
     width:100%;
     align-items:flex-start;
+}
+
+.file-header button:active {
+    background-color: #adadad;
+    color: white;
+    /* idk this stuff is optional, idk if real windows has this...? */
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color:white; */
 }
 
 .recycling .address {
@@ -602,7 +613,7 @@ figcaption {
     padding-right: 45vh;
     box-shadow: inset -1px -1px 2px #909090;
     border:1px white solid;
-    z-index:0;
+    z-index:1;
 }
 
 .recycle-contentcontainer {
@@ -728,13 +739,13 @@ figcaption {
 
 .minesweeper {
     display: block;
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     overflow-y:hidden;
     position: fixed;
     z-index: 1;
-    width: 40vw;
-    height: 500px;
+    width: 15vw;
+    height: 36vh;
     top: 8vh;
     left: 15vw;
 }
