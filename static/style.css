@@ -180,8 +180,8 @@ a {
     visibility: hidden;
     z-index: 1;
     position: fixed;
-    width: 38vw;
-    height: 48vh;
+    width: 52vw;
+    height: 55vh;
     bottom: 10vh;
     left: 5vw;
 }
@@ -301,7 +301,7 @@ a {
     overflow-y:hidden;
     position: fixed;
     z-index: 1;
-    width: 28vw;
+    width: 32vw;
     height: 320px;
     top: 8vh;
     left: 57vw;
